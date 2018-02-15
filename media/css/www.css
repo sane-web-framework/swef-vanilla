@@ -1,0 +1,49 @@
+
+#wait {
+    display:                block;
+    position:               fixed;
+    z-index:                1000;
+    left:                   0;
+    top:                    0;
+    margin:                 0;
+    width:                  100vw;
+    height:                 100vh;
+    background-color:       rgba(255,255,255,0.4);
+    cursor:                 wait;
+}
+
+/*
+Almost completely safe fonts:   http://www.illumasolutions.com/font.htm
+Pretty safe fonts:              http://www.webdesigndev.com/16-gorgeous-web-safe-fonts-to-use-with-css/
+Always fall back to:            sans-serif, serif or monospace
+*/
+
+body.www {
+    background-color:       #ffffff;
+    font-family:            Sans-serif;
+}
+
+.www .global-notifications {
+    border-style:           solid;
+    boder-width:            1px;
+}
+
+.www .note {
+    color:                  #880000;
+}
+
+.monospace {
+    font-family:            Monospace;
+}
+
+.www textarea {
+    width:                  100%;
+    height:                 60vh;
+    font-family:            Monospace;
+}
+
+.www div.input {
+    width:                  50%;
+    min-width:              400px;
+}
+

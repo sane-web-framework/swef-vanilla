@@ -1,0 +1,261 @@
+
+#wait {
+    display:                block;
+    position:               fixed;
+    z-index:                1000;
+    left:                   0;
+    top:                    0;
+    margin:                 0;
+    width:                  100vw;
+    height:                 100vh;
+    background-color:       rgba(238,238,255,0.7);
+    cursor:                 wait;
+}
+
+#notifications {
+    display:                block;
+    position:               fixed;
+    left:                   0;
+    top:                    0;
+    width:                  100vw;
+    height:                 100vh;
+    padding:                40vh  25vw  0  25vw;
+    background-color:       rgba(238,238,255,0.7);
+    cursor:                 pointer;
+}
+
+.dashboard .note {
+    border-style:           solid;
+    border-width:           2px;
+    border-color:           #660000;
+    width:                  50vw;
+    margin:                 0 0 1em 0;
+    background-color:       #ffeeee;
+    padding:                0.5em;
+    color:                  #660000;
+}
+
+body.dashboard {
+    background-color:       rgba(238,238,255,1);
+    padding:                2vh 2vw 2vh 2vw;
+    font-size:              1em;
+}
+
+body.dashboard * {
+    background-color:       transparent;
+    font-family:            Monospace;
+}
+
+.dashboard > h1 {
+    margin:                 0;
+}
+
+.dashboard .menu-plugins .item h3 {
+    margin-bottom:          0;
+    padding-bottom:         0;
+}
+
+.dashboard .hilite {
+    background-color:       #cccccc;
+}
+
+.dashboard input[disabled] {
+}
+
+.dashboard select[disabled] {
+}
+
+.dashboard .inactive {
+    color:                  #888888;
+    font-style:             italic;
+}
+
+.dashboard th {
+    text-align:             left;
+}
+
+.dashboard .global-notifications {
+    position:               fixed;
+    left:                   30vw;
+    top:                    40vh;
+    width:                  40vw;
+}
+
+.dashboard .vspace {
+    height:                 2em;
+}
+
+.dashboard div.content {
+    position:               relative;
+    right:                  0;
+    float:                  right;
+    margin:                 1vh 1vw 1vh 2vw;
+    width:                  70vw;
+    height:                 80vh;
+    overflow:               scroll;
+}
+
+.dashboard div.menu,div.menu-plugins {
+    margin:                 1vh 2vw 1vh 0vw;
+    width:                  20vw;
+}
+
+.dashboard .content div.list {
+    margin:                 0vh 0vw 0vh 0vw;
+    width:                  68vw;
+}
+
+.dashboard .content .list > *:nth-child(odd) {
+    background-color:       rgba(220,220,220,0.3);
+}
+
+.dashboard .content .list > *:nth-child(even) {
+    background-color:       rgba(220,220,220,0.1);
+}
+
+.dashboard .content .smalltext {
+    font-size:              0.8em;
+}
+
+.dashboard .content label {
+    display:                inline-block;
+    width:                  15em;
+}
+
+.dashboard .content label.wee {
+    width:                  4em;
+}
+
+.dashboard .content label.tiny {
+    width:                  5em;
+}
+
+.dashboard .content label.narrow {
+    width:                  10em;
+}
+
+.dashboard .content label.wide {
+    width:                  20em;
+}
+
+.dashboard .content label.vast {
+    width:                  25em;
+}
+
+.dashboard form input.inline {
+    margin-left:            1em;
+}
+
+.dashboard div.plugin-dash {
+    margin:                 1vh 0vw 1vh 0vw;
+    border-style:           solid;
+    border-width:           1px;
+    padding:                1em;
+}
+
+.dashboard div.constant span {
+    background-color:       #ccccee;
+    font-weight:            bold;
+}
+
+.dashboard form div.input {
+    clear:                  both;
+}
+
+.dashboard form button,input[type=submit],a.button {
+    min-width:              6em;
+    margin:                 0;
+    border-width:           2px;
+    background-color:       #eeeeff;
+    padding:                0.2em;
+    font-size:              0.85em;
+    font-weight:            bold;
+}
+.dashboard form a.button {
+    display:                inline-block;
+    padding:                0.1em;
+    border-style:           outset;
+    border-color:           #7777777;
+    text-align:             center;
+    text-decoration:        none;
+}
+.dashboard form a.button:hover {
+    border-color:           #7777777;
+    text-decoration:        underline;
+}
+.dashboard form a.button:active {
+    border-style:           inset;
+    border-color:           #7777777;
+}
+
+.dashboard form button {
+    cursor:                 pointer;
+}
+
+.dashboard form button > a {
+    font-family:            inherit;
+    font-size:              inherit;
+    padding:                0;
+    margin:                 0;
+    text-decoration:        none;
+}
+
+.dashboard form input.wee {
+    width:                  3vw;
+}
+
+.dashboard form input.tiny {
+    width:                  5vw;
+}
+
+.dashboard form input.narrow {
+    width:                  10vw;
+}
+
+.dashboard form .normal {
+    width:                  15vw;
+}
+
+.dashboard form .wide {
+    width:                  20vw;
+}
+
+.dashboard form .vast {
+    width:                  30vw;
+}
+
+.dashboard form .ultravast {
+    width:                  45vw;
+}
+
+.bottom {
+    vertical-align:         bottom;
+}
+
+.center {
+    text-align:             center;
+}
+
+.right {
+    text-align:             right;
+}
+
+td.button {
+    width:                  15em;
+}
+
+
+
+/*
+.dashboard form .right {
+    position:               absolute;
+    margin-top:             0.5em;
+    left:                   55vw;
+    top:                    auto;
+}
+
+.dashboard form a.right {
+    left:                   55.5vw;
+    margin-top:             1.4em;
+}
+*/

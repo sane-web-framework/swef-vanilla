@@ -1,0 +1,7 @@
+<?php if (count($this->notes())): ?>
+    <div id="notifications" class="global-notifications">
+<?php foreach ($this->notes() as $n): ?>
+      <div class="note"><?php echo htmlentities ($n); ?></div>
+<?php endforeach; ?>
+    </div>
+<?php endif; ?>

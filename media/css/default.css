@@ -1,0 +1,215 @@
+
+/* With thanks to html5boilerplate.com */
+
+body {
+    background-color:       #ffffff;
+    font-family:            'Verdana','Geneva','Arial','Helvetica','sans-serif';
+    font-size:              12pt;
+}
+
+div#data {
+    background-color:       #eedfe7;
+}
+
+div#data > a {
+    float:                  right;
+    margin:                 1em;
+}
+
+div#container {
+    min-width:              1000px;
+}
+
+#header {
+    min-width:              1000px;
+    height:                 120px;
+    border-style:           solid;
+    border-width:           1px;
+    border-color:           #000000;
+    background-repeat:      no-repeat;
+    background-position:    right bottom;
+    background-image:       url('../image/logo_aru.gif');
+    background-color:       #eedfe7;
+}
+
+#title {
+    font-size:              2.2em;
+    margin:                 0.4em 0em 0.3em 0.55em;
+}
+
+#subtitle {
+    font-size:              0.9em;
+    margin-left:            1.5em;
+}
+
+.footnote {
+    margin-top:             0.5em;
+    font-size:              0.75em;
+    margin-left:            1.8em;
+}
+
+#menu {
+    display:                none;
+    background-color:       #ff0000;
+    float:                  left;
+    height:                 400px;
+}
+
+
+#menu a {
+    display:                block;
+}
+
+.message {
+    color:                  #000066;
+}
+
+.core {
+    font-weight:            bold;
+}
+
+.default {
+    color:                  #cc0000;
+}
+
+div#notifications {
+    position:               absolute;
+    margin:                 20% 0 0 28.75%;
+    border-style:           solid;
+    border-width:           1px;
+    border-color:           #aa0000;
+    width:                  40%;
+    background-color:       inherit;
+    opacity:                0.7;
+    padding:                5px;
+}
+
+div#notifications p.note {
+    display:                block;
+    text-align:             center;
+    color:                  #aa0000;
+    font-weight:            bold;
+}
+
+iframe.column {
+    height:                 480px;
+    resize:                 vertical;
+    overflow:               auto;
+    margin:                 1% 0% 1% 1%;
+}
+
+iframe#left {
+    float:                  left;
+    margin-left:            0.3%;
+    width:                  42%;
+}
+
+iframe#center {
+    float:                  left;
+    width:                  27%;
+}
+
+iframe#right {
+    width:                  27%;
+}
+
+#footer {
+    display:                none;
+}
+
+form#login {
+    float:                  right;
+    display:                block;
+    margin:                 0.8em 15em 0 0;
+    border-style:           solid;
+    border-width:           1px;
+    border-color:           #000000;
+    width:                  24em;
+    background-color:       #ffffff;
+    opacity:                0.8;
+    padding-top:            0.4em;
+    padding-left:           1em;
+}
+
+form#login>div {
+    width:                  30em;
+    margin-bottom:          0.4em;
+}
+
+form#login .legend {
+    display:                inline-block;
+    width:                  8em;
+    font-size:              0.9em;
+}
+
+input[type=submit] {
+    background-color:       #863a5d;
+    color:                  #ffffff;
+    font-weight:            bold;
+}
+
+div#data form > input[type=submit] {
+    float:                  right;
+    margin:                 1em;
+}
+
+form#login input {
+    display:                inline-block;
+    width:                  16em;
+}
+
+form#login input[type=submit] {
+    width:                  auto;
+}
+
+form > a {
+    display:                block;
+    padding:                1em 1em 1em;
+}
+
+.close {
+    float:                  right;
+}
+
+table.list {
+    width:                  100%;
+    font-size:              0.75em;
+}
+
+table.list tr.hilite {
+    background-color:       #ffdd00;
+}
+
+table.list th {
+    border-style:           solid;
+    border-color:           #000000;
+    border-width:           0px 0px 1px 0px;
+    text-align:             left;
+}
+
+table.list td {
+    border-style:           solid;
+    border-color:           #000000;
+    border-width:           0px 0px 1px 0px;
+}
+
+table.list .right {
+    text-align:             right;
+}
+
+table.list a {
+    display:                block;
+}
+
+table.list select {
+    width:                  10em;
+}
+
+table.list select option {
+    background-color:       #ffdd00;
+}
+
+table.list td.hilite {
+    background-color:       #ffdd00;
+}
+

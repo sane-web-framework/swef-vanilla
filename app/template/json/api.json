@@ -1,0 +1,19 @@
+<?php
+
+// WARNING - JSON DATA MUST BE UTF-8!
+
+// Options
+$options        = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK;
+if (SWEF_DIAGNOSTIC) {
+    $options   |= JSON_PRETTY_PRINT;
+}
+
+// Output
+$this->pull ('api.cors');
+echo json_encode (
+         $this->swef->apiResponse
+        ,$options
+        ,SWEF_API_JSON_DEPTH
+     );
+
+?>

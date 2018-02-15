@@ -1,0 +1,67 @@
+
+Options -Indexes
+DirectoryIndex http.php
+
+  <IfModule mod_rewrite.c>
+
+    # Always needed
+    RewriteEngine on
+
+
+# THIS NEEDS CHANGING IF http.php is in a subdirectory of DOCUMENT_ROOT
+    RewriteBase "/"
+
+
+# THESE NEED COMMENTING OUT IF RUNNING ON PORT 80 (SECURELY OR NOT)
+    RewriteCond  %{SERVER_PORT}                         ^80$
+    RewriteRule  .                                      https://%{HTTP_HOST}%{REQUEST_URI}  [L]
+    
+
+    # Rewrite /robots.txt
+    RewriteCond  %{REQUEST_URI}                         ^/robots\.txt$
+    RewriteRule  .                                      /robots.php                         [L,R]
+    # ... so STOPPED REWRITING and RELOADED in this case
+
+    # Suppress direct requests to SWEF application
+    RewriteCond  %{REQUEST_URI}                         ^/http\.php$                        [OR]
+    RewriteCond  %{REQUEST_URI}                         ^/app/?.*$                          [OR]
+    RewriteCond  %{REQUEST_URI}                         ^/template/?.*$
+    RewriteRule  .                                      /                                   [L,R]
+    # ... so STOPPED REWRITING and RELOADED in this case
+
+    # Reuse favicon.ico for all subdirectories
+    RewriteCond  %{REQUEST_URI}                         ^/.+/favicon\.ico$
+    RewriteRule  .                                      ./favicon.ico
+    # ... and kept rewriting in this case
+
+    # Apache is responsible for handling missing favicon.ico, robots.txt or sitemap.xml
+    RewriteCond  %{REQUEST_URI}                         ^/favicon\.ico$                     [OR]
+    RewriteCond  %{REQUEST_URI}                         ^/robots\.txt$                      [OR]
+    RewriteCond  %{REQUEST_URI}                         ^/sitemap\.xml$
+    RewriteRule  .                                      -                                   [L]
+    # ... so DID NOTHING and STOPPED REWRITING in this case
+
+    # SWEF is responsible for media requests to restricted content directories
+    RewriteCond  %{REQUEST_URI}                         ^/media/content/.*$
+    RewriteCond  %{REQUEST_URI}                         !^/media/content/open/.*$
+    RewriteRule  .                                      ./                                  [L]
+    # ... and STOPPED REWRITING in this case
+
+    # Apache is responsible for rest of media directory and any document errors within it
+    # including open content directory but not including other restricted content directories
+    RewriteCond  %{REQUEST_URI}                         ^/media/.*$
+    RewriteRule  .                                      -                                   [L]
+    # ... so DID NOTHING and STOPPED REWRITING in this case
+
+    # SWEF is resposible for all other requests that have an invalid REQUEST_FILENAME
+    RewriteCond  %{REQUEST_FILENAME}                    !-d
+    RewriteCond  %{REQUEST_FILENAME}                    !-f
+    RewriteRule  .                                      ./                                  [L]
+    # ... and STOPPED REWRITING in this case
+
+    # All remaining requests are for resources that are either media or unconnected with SWEF
+    # Bespoke mod_rewrite conditions and rules should probably go here...
+
+
+  </IfModule>
+

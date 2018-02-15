@@ -1,0 +1,23 @@
+<?php
+array_shift ($_ARGS);
+foreach ($_ARGS as $k=>$v) {
+    $name       = $k;
+    $selected   = $v;
+    break;
+}
+?>
+<?php if(isset($name) && array_key_exists('options',$_ARGS)): ?>
+      <select name="<?php echo htmlentities ($name); ?>">
+<?php     foreach($_ARGS['options'] as $v=>$n): ?>
+        <option
+          value="<?php echo htmlentities($v); ?>"
+<?php         if($v==$selected): ?>
+          selected="selected"
+<?php         endif; ?>
+        >
+          <?php echo htmlentities ($n); ?>
+        </option>
+<?php     endforeach; ?>
+      </select>
+<?php endif; ?>
+

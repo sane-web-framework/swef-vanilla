@@ -1,0 +1,49 @@
+
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Editor:         Editor Name
+    Site:           http://editor.name.site/
+    Contact:        http://editor.name.site/contact
+    Location:       Editor Location
+                            
+    Maintainer:     Maintainer Name
+    Site:           http://maintainer.name.site/
+    Contact:        http://maintainer.name.site/contact
+    Location:       Maintainer Location
+                            
+    Developer:      Developer Name
+    Site:           http://creator.name.site/
+    Contact:        http://creator.name.site/contact
+    Location:       Developer Location
+                            
+    Creator:        Creator Name
+    Site:           https://<?php echo htmlentities ($_SERVER['HTTP_HOST']); ?>/
+    Contact:        https://<?php echo htmlentities ($_SERVER['HTTP_HOST']); ?>/contact
+    Location:       Creator Location
+                            
+# THANKS
+
+    Thankee:        http://thankee.name.site/contact
+
+# TECHNOLOGY COLOPHON
+
+#   Google Analytics
+#   jQuery
+#   Modernizr
+#   Normalize.css
+    HTML5BoilerPlate 6
+    ECMAScript 5 (JS)
+    CSS 3
+    HTML 5
+    cms.swef.io 1
+    swef.swef.io 1
+    PHP 7
+    Sqlines.com/online
+    MariaDB | MySQL | PostgreSQL
+    mod_rewrite
+    Apache HTTP Server
+    GNU/Linux
+

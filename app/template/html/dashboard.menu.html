@@ -1,0 +1,24 @@
+<?php
+if (array_key_exists('title',$_ARGS)) {
+    $title          = $_ARGS['title'];
+}
+else {
+    $title          = 'Menu';
+}
+?>
+
+<div class="menu">
+
+  <h2><t en><?php echo htmlentities ($title); ?></t></h2>
+
+    <ul>
+      <li><a href="./dashboard.home"><t en>Home</t></a></li>
+      <li><a href="./logout"><t en>Log out</t></a></li>
+      <li><a href="./sysadmin.plugins?c=\Swef\SwefCMS&o=collections"><t en>Content management</t></a></li>
+      <li><a href="./sysadmin.plugins"><t en>Manage plugins</t></a></li>
+      <li><a href="./sysadmin.stored_procedures"><t en>Inspect procedures</t></a></li>
+      <li><a href="./sysadmin.constants"><t en>Inspect constants</t></a></li>
+    </ul>
+
+</div>
+

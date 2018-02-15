@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+<?php $this->pull ('global.head'); ?>
+    <link rel="stylesheet" href="./media/css/dashboard.css">
+    <link rel="stylesheet" href="./media/css/swefcms.dashboard.css">
+    <title><t en>SWEF dashboard</t></title>
+  </head>
+  <body class="dashboard dashboard-default">
+<?php $this->pull ('global.legacy'); ?>
+
+    <h1>SWEF <t en>dashboard</t></h1>
+
+<!-- PUSHED SCRIPT OUTPUT -->
+<?php $this->output (); ?>
+
+    <small><t en>HTML5 templates derived from</t> <a href="http://www.html5boilerplate.com/">html5boilerplate.com</a></small>
+
+<?php $this->pull ('global.notifications'); ?>
+
+<?php $this->pull ('global.js'); ?>
+
+    <script>
+swef._init ('<?php echo $this->swef->user->uuid; ?>');
+swef.apiSet ('<?php echo SWEF_API_ENDPOINT; ?>','<?php echo SWEF_API_POST_KEY; ?>');
+swef.notifyElement ('notifications');
+swefcms._init (1024); // Maximum allowed parser lines
+    </script>
+
+  </body>
+
+</html>

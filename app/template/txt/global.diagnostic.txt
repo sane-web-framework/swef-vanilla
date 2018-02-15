@@ -1,0 +1,39 @@
+<?php
+if (defined('SWEF_DIAGNOSTIC_START')) {
+    define ('SWEF_DIAGNOSTIC_TIME',intval(1000*microtime(SWEF_BOOL_TRUE))-SWEF_DIAGNOSTIC_START);
+}
+else {
+    define (SWEF_DIAGNOSTIC_TIME,'[script was not timed]');
+}
+?>
+
+<?php echo __FILE__.SWEF_STR__CRLF; ?>
+
+RUN TIME:               <?php print_r(SWEF_DIAGNOSTIC_TIME); ?> ms
+
+RESPONSE HEADERS:       <?php print_r(headers_list()); ?>
+
+UNIX TIME:              <?php echo $this->swef->moment->unix(); ?>
+
+GMT TIME:               <?php echo $this->swef->moment->gmt(); ?>
+
+SERVER TIME:            <?php echo $this->swef->moment->server(); ?>
+
+CLIENT TIME:            <?php echo $this->swef->moment->client(); ?>
+
+DATABASE CALLS:         <?php print_r($this->swef->db->dbCalls()); ?>
+
+DATABASE ERRORS:       <?php print_r($this->swef->db->errors); ?>
+
+
+SESSION APPROX SIZE:   <?php echo strlen(serialize($_SESSION)); ?> Bytes [ strlen(serialize($_SESSION)) ]
+
+PAGE DIAGNOSTIC:        <?php print_r($this->diagnosticGet()); ?>
+
+
+POST (after security): <?php print_r ($_POST); ?>
+
+SESSION DATA:           <?php print_r ($_SESSION); ?>
+
+PHP USER CONSTANTS:     <?php print_r ($this->swef->getDefinedConstants()); ?>
+

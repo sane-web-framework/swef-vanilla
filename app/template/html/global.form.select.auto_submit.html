@@ -1,0 +1,27 @@
+<?php
+array_shift ($_ARGS);
+foreach ($_ARGS as $k=>$v) {
+    $name       = $k;
+    $selected   = $v;
+    break;
+}
+?>
+<?php if(isset($name) && array_key_exists('options',$_ARGS)): ?>
+      <select name="<?php echo htmlentities ($name); ?>" onchange="this.form.submit()">
+<?php     foreach($_ARGS['options'] as $v=>$n): ?>
+        <option
+          value="<?php echo htmlentities($v); ?>"
+<?php         if($v==$selected): ?>
+          selected="selected"
+<?php         endif; ?>
+        >
+<?php if(array_key_exists('language',$_ARGS)): ?>
+          <t <?php echo htmlentities($_ARGS['language']); ?>><?php echo htmlentities ($n); ?></t>
+<?php else: ?>
+          <?php echo htmlentities ($n); ?>
+<?php endif; ?>
+        </option>
+<?php     endforeach; ?>
+      </select>
+<?php endif; ?>
+

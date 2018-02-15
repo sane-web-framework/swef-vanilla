@@ -1,0 +1,14 @@
+
+<!--
+Google Analytics:
+ * Change SWEF_GOOGLE_ANALYTICS_ID to be your site ID
+ * Find this in configuration file constant.common; the format for this ID looks like: UA-XXXXX-Y
+-->
+<?php if(SWEF_GOOGLE_ANALYTICS_ID): ?>
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','<?php echo htmlentities (SWEF_GOOGLE_ANALYTICS_ID); ?>','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<?php endif; ?>
+
