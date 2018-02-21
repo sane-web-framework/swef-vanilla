@@ -26,6 +26,6 @@
 
   <p><em><samp>&lt;t fr&gt;Unrecognised phrase&lt;/t&gt;</samp></em> becomes <ins><t fr>Unrecognised phrase</t></ins></p>
 
-  <p>Set SWEF_DIAGNOSTIC_MODE to true in order to collect XML file of untranslated phrases in ./app/log/untranslated.log for bulk translation; these phrases can then be added to phrases.mylanguagecode. Eventually there will be a tool for that...</p>
+  <p>Set SWEF_DIAGNOSTIC_MODE to true in order to collect XML file of untranslated phrases in <?php echo htmlentities (SWEF_DIAGNOSTIC_FILE_UNTRANSLATED); ?> for bulk translation; these phrases can then be added to phrases.mylanguagecode. Eventually there will be a tool for that...</p>
 
 </div>
