@@ -1,6 +1,4 @@
 
-Options -Indexes
-DirectoryIndex http.php
 
   <IfModule mod_rewrite.c>
 
