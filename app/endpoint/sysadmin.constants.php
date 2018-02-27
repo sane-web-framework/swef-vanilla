@@ -2,7 +2,7 @@
 <?php
 
 // Define
-$dirs                                   = array (SWEF_CONFIG_PATH,SWEF_DIR_PLUGIN);
+$dirs                                   = array (SWEF_DIR_CONFIG,SWEF_DIR_PLUGIN);
 $prefixes                               = array ('constant.','configure.');
 $suffixes                               = array ('.define.php');
 $d                                      = scandir (SWEF_DIR_PLUGIN);
