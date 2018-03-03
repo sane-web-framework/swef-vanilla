@@ -4,9 +4,9 @@ namespace Swef\Bespoke;
 
 class Database extends \Swef\Base\SwefDatabase {
 
-    public function __construct ( ) {
+    public function __construct ($dsn,$usr,$pwd) {
         // Always construct the base class - PHP does not do this implicitly
-        parent::__construct ();
+        parent::__construct ($dsn,$usr,$pwd);
     }
 
     public function __destruct ( ) {
