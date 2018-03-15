@@ -19,7 +19,7 @@
     top:                    0;
     width:                  100vw;
     height:                 100vh;
-    padding:                40vh  25vw  0  25vw;
+    padding:                40vh 25vw 0 25vw;
     background-color:       rgba(238,238,255,0.7);
     cursor:                 pointer;
 }
@@ -36,21 +36,33 @@
 }
 
 .tooltip .tooltip {
-    display:                none;
+    display:                block;
     position:               absolute;
-    right:                  2vw;
-    margin-top:             -2vh;
-    width:                  30vw;
+    margin:                 0vh 0vw 0vh -12vw;
+    border-style:           solid;
+    border-width:           1px;
+    border-color:           #660000;
+    width:                  20vw;
     height:                 30vh;
-    padding:                5%;
-    overflow:               scroll;
-    white-space:            pre-wrap;
-    background-color:       #000066;
-    color:                  #eeeeff;
+    background-color:       rgba(238,238,255,1);
+    padding:                1vh 1vw 1vh 1vw;
+    overflow-y:             scroll;
 }
 
-.tooltip:hover .tooltip {
-    display:                block;
+.tooltip pre.tooltip {
+    white-space:            pre-wrap;
+}
+
+details.tooltip .tooltip-top-left {
+    margin:                 0vh 0vw 0vh 0vw;
+}
+
+details.tooltip .tooltip-top-center {
+    margin:                 0vh 0vw 0vh -10vw;
+}
+
+details.tooltip .tooltip-top-right {
+    margin:                 0vh 0vw 0vh -20vw;
 }
 
 body.dashboard {
@@ -257,6 +269,10 @@ body.dashboard * {
 
 .right {
     text-align:             right;
+}
+
+.fill {
+    width:                  100%;
 }
 
 td.button {
