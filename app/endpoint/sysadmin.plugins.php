@@ -7,10 +7,10 @@
 <?php if(array_key_exists($c,$plugins)): ?>
 <?php     $plugin = new $c ($this); ?>
 <?php     $plugin->propertiesLoad (); ?>
+
   <div class="option">
-    <small class="info">Information: <?php echo htmlentities ($plugin->_info($plugins)); ?></small>
-    <a href="./sysadmin.plugins">Quit</a>
 <?php     if ($plugins[$c][$this->swef->context[SWEF_COL_CONTEXT]][SWEF_STR_DASHBOARD]): ?>
+
     <div class="dashboard">
 <?php         $plugin->_dashboard (); ?>
 
