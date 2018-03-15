@@ -35,6 +35,24 @@
     color:                  #660000;
 }
 
+.tooltip .tooltip {
+    display:                none;
+    position:               absolute;
+    right:                  2vw;
+    margin-top:             -2vh;
+    width:                  30vw;
+    height:                 30vh;
+    padding:                5%;
+    overflow:               scroll;
+    white-space:            pre-wrap;
+    background-color:       #000066;
+    color:                  #eeeeff;
+}
+
+.tooltip:hover .tooltip {
+    display:                block;
+}
+
 body.dashboard {
     background-color:       rgba(238,238,255,1);
     padding:                2vh 2vw 2vh 2vw;
