@@ -8,7 +8,7 @@
     margin:                 0;
     width:                  100vw;
     height:                 100vh;
-    background-color:       rgba(238,238,255,0.7);
+    background-color:       rgba(239,239,255,0.7);
     cursor:                 wait;
 }
 
@@ -20,7 +20,7 @@
     width:                  100vw;
     height:                 100vh;
     padding:                40vh 25vw 0 25vw;
-    background-color:       rgba(238,238,255,0.7);
+    background-color:       rgba(239,239,255,0.7);
     cursor:                 pointer;
 }
 
@@ -44,7 +44,7 @@
     border-color:           #660000;
     width:                  20vw;
     height:                 30vh;
-    background-color:       rgba(238,238,255,1);
+    background-color:       rgba(239,239,255,1);
     padding:                1vh 1vw 1vh 1vw;
     overflow-y:             scroll;
 }
@@ -54,19 +54,28 @@
 }
 
 details.tooltip .tooltip-top-left {
-    margin:                 0vh 0vw 0vh 0vw;
+    margin:                 -1.5em 0 0 1vw;
 }
 
 details.tooltip .tooltip-top-center {
-    margin:                 0vh 0vw 0vh -10vw;
+    margin:                 -1.5em 0 0 -11.5vw;
 }
 
 details.tooltip .tooltip-top-right {
-    margin:                 0vh 0vw 0vh -20vw;
+    margin:                 -1.5em 3em 0 -22.5vw;
+}
+
+form.tooltip-form {
+    padding:                0 10% 0 10%;
+}
+
+form.tooltip-form * {
+    display:                block;
+    width:                  100%;
 }
 
 body.dashboard {
-    background-color:       rgba(238,238,255,1);
+    background-color:       rgba(239,239,255,1);
     padding:                2vh 2vw 2vh 2vw;
     font-size:              1em;
 }
@@ -131,16 +140,16 @@ body.dashboard * {
     width:                  20vw;
 }
 
-.dashboard .content div.list {
+.dashboard div.list {
     margin:                 0vh 0vw 0vh 0vw;
     width:                  68vw;
 }
 
-.dashboard .content .list > *:nth-child(odd) {
+.dashboard .list > *:nth-child(odd) {
     background-color:       rgba(220,220,220,0.3);
 }
 
-.dashboard .content .list > *:nth-child(even) {
+.dashboard .list > *:nth-child(even) {
     background-color:       rgba(220,220,220,0.1);
 }
 
@@ -148,8 +157,13 @@ body.dashboard * {
     font-size:              0.8em;
 }
 
+.dashboard .input details {
+    margin:                 0 0 0 15em;
+}
+
 .dashboard .content label {
     display:                inline-block;
+    vertical-align:         top;
     width:                  15em;
 }
 
@@ -257,6 +271,127 @@ body.dashboard * {
 
 .dashboard form .ultravast {
     width:                  45vw;
+}
+
+.dashboard-layer {
+    position:               fixed;
+    margin:                 0;
+    box-sizing:             border-box;
+    border-style:           solid;
+    border-width:           1px;
+    border-color:           #000066;
+    padding:                6vh 2vw 6vh 2vw;
+    overflow-y:             scroll;
+}
+
+.dashboard-layer.dashboard-layer-1 {
+    z-index:                10;
+    left:                   1vw;
+    top:                    1vh;
+    padding-top:            5vh;
+    width:                  97vw;
+    height:                 98vh;
+    background-color:       rgba(249,249,255,1);
+}
+
+.dashboard-layer.dashboard-layer-2 {
+    z-index:                20;
+    left:                   2vw;
+    top:                    2vh;
+    padding-top:            4vh;
+    width:                  95vw;
+    height:                 96vh;
+    background-color:       rgba(243,243,255,1);
+}
+
+.dashboard-layer.dashboard-layer-3 {
+    z-index:                30;
+    left:                   3vw;
+    top:                    3vh;
+    padding-top:            3vh;
+    width:                  93vw;
+    height:                 94vh;
+    background-color:       rgba(237,237,255,1);
+}
+
+.dashboard-layer.dashboard-layer-4 {
+    z-index:                40;
+    left:                   4vw;
+    top:                    4vh;
+    padding-top:            2vh;
+    width:                  91vw;
+    height:                 92vh;
+    background-color:       rgba(231,231,255,1);
+}
+
+.dashboard-layer.dashboard-layer-5 {
+    z-index:                50;
+    left:                   5vw;
+    top:                    5vh;
+    padding-top:            1vh;
+    width:                  89vw;
+    height:                 90vh;
+    background-color:       rgba(225,225,255,1);
+}
+
+.dashboard-layer.dashboard-layer-6 {
+    z-index:                60;
+    left:                   6vw;
+    top:                    6vh;
+    padding-top:            0vh;
+    width:                  87vw;
+    height:                 88vh;
+    background-color:       rgba(219,219,255,1);
+}
+
+.dashboard-layer.dashboard-layer-7 {
+    z-index:                70;
+    left:                   7vw;
+    top:                    7vh;
+    padding-top:            0vh;
+    width:                  85vw;
+    height:                 86vh;
+    background-color:       rgba(213,213,255,1);
+}
+
+.dashboard-layer.dashboard-layer-8 {
+    z-index:                80;
+    left:                   8vw;
+    top:                    8vh;
+    padding-top:            0vh;
+    width:                  83vw;
+    height:                 84vh;
+    background-color:       rgba(207,207,255,1);
+}
+
+.dashboard-layer.dashboard-layer-9 {
+    z-index:                90;
+    left:                   9vw;
+    top:                    9vh;
+    padding-top:            0vh;
+    width:                  81vw;
+    height:                 82vh;
+    background-color:       rgba(201,201,255,1);
+}
+
+.plugin-dash .dashboard-layer.dashboard-half-left {
+    z-index:                100;
+    left:                   9vw;
+    top:                    9vh;
+    padding-top:            0vh;
+    width:                  40vw;
+    height:                 82vh;
+    background-color:       rgba(195,195,255,1);
+}
+
+.plugin-dash .dashboard-layer.dashboard-half-right {
+    z-index:                100;
+    left:                   50vw;
+    top:                    9vh;
+    padding-top:            0vh;
+    width:                  40vw;
+    height:                 82vh;
+    background-color:       rgba(195,195,255,1);
 }
 
 .bottom {
