@@ -106,6 +106,9 @@ swef = {
     }
 
    ,wait : function ( ) {
+        if (typeof(this.waitElement)!='object') {
+            return;
+        }
         document.body.appendChild (this.waitElement);
     }
 
