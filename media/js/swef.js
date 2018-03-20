@@ -36,7 +36,7 @@ swef = {
         xhr.send (this.apiPostKey+'='+encodeURIComponent(JSON.stringify(jsonObject)));
     }
 
-   ,apiSet (endpoint,postKey) {
+   ,apiSet : function (endpoint,postKey) {
         this.apiEndpoint        = endpoint;
         this.apiPostKey         = postKey;
     }

@@ -257,6 +257,10 @@ body.dashboard * {
     width:                  10vw;
 }
 
+.dashboard form .narrow {
+    width:                  10vw;
+}
+
 .dashboard form .normal {
     width:                  15vw;
 }
