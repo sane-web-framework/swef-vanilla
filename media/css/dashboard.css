@@ -2,7 +2,7 @@
 #wait {
     display:                block;
     position:               fixed;
-    z-index:                1000;
+    z-index:                1001;
     left:                   0;
     top:                    0;
     margin:                 0;
@@ -15,6 +15,7 @@
 #notifications {
     display:                block;
     position:               fixed;
+    z-index:                1000;
     left:                   0;
     top:                    0;
     width:                  100vw;
@@ -37,32 +38,50 @@
 
 .tooltip .tooltip {
     display:                block;
+    box-sizing:             border-box;
     position:               absolute;
     margin:                 0vh 0vw 0vh -12vw;
     border-style:           solid;
     border-width:           1px;
     border-color:           #660000;
-    width:                  20vw;
-    height:                 30vh;
+    width:                  40vw;
+    height:                 50vh;
     background-color:       rgba(239,239,255,1);
     padding:                1vh 1vw 1vh 1vw;
     overflow-y:             scroll;
+}
+
+.tooltip .tooltip-small {
+    width:                  30vw;
+    height:                 20vh;
+}
+
+details summary {
+    cursor:                 pointer;
 }
 
 .tooltip pre.tooltip {
     white-space:            pre-wrap;
 }
 
-details.tooltip .tooltip-top-left {
+.tooltip .tooltip-bottom-left {
+    margin:                 -25vw 0 0 4vw;
+}
+
+.tooltip .tooltip-middle-left {
+    margin:                 -10vw 0 0 2vw;
+}
+
+.tooltip .tooltip-top-left {
     margin:                 -1.5em 0 0 1vw;
 }
 
-details.tooltip .tooltip-top-center {
+.tooltip .tooltip-top-center {
     margin:                 -1.5em 0 0 -11.5vw;
 }
 
-details.tooltip .tooltip-top-right {
-    margin:                 -1.5em 3em 0 -22.5vw;
+.tooltip .tooltip-top-right {
+    margin:                 -1.5em 5em 0 -40vw;
 }
 
 form.tooltip-form {
@@ -133,6 +152,7 @@ body.dashboard * {
     height:                 80vh;
     overflow:               scroll;
     resize:                 vertical;
+    background-color:       rgba(239,239,255,1);
 }
 
 .dashboard div.menu,div.menu-plugins {
@@ -207,7 +227,11 @@ body.dashboard * {
     clear:                  both;
 }
 
-.dashboard form button,input[type=submit],a.button {
+.dashboard form div.input.allow-float {
+    clear:                  none;
+}
+
+.dashboard button,input[type=submit],a.button {
     min-width:              6em;
     margin:                 0;
     border-width:           2px;
@@ -245,35 +269,35 @@ body.dashboard * {
     text-decoration:        none;
 }
 
-.dashboard form input.wee {
+.dashboard  .wee {
     width:                  3vw;
 }
 
-.dashboard form input.tiny {
+.dashboard .tiny {
     width:                  5vw;
 }
 
-.dashboard form input.narrow {
+.dashboard .narrow {
     width:                  10vw;
 }
 
-.dashboard form .narrow {
+.dashboard .narrow {
     width:                  10vw;
 }
 
-.dashboard form .normal {
+.dashboard .normal {
     width:                  15vw;
 }
 
-.dashboard form .wide {
+.dashboard .wide {
     width:                  20vw;
 }
 
-.dashboard form .vast {
+.dashboard .vast {
     width:                  30vw;
 }
 
-.dashboard form .ultravast {
+.dashboard .ultravast {
     width:                  45vw;
 }
 
@@ -284,117 +308,89 @@ body.dashboard * {
     border-style:           solid;
     border-width:           1px;
     border-color:           #000066;
-    padding:                6vh 2vw 6vh 2vw;
+    width:                  60vw;
+    height:                 75vh;
+    padding:                2vh 2vw 2vh 2vw;
     overflow-y:             scroll;
 }
 
 .dashboard-layer.dashboard-layer-1 {
     z-index:                10;
-    left:                   1vw;
-    top:                    1vh;
-    padding-top:            5vh;
-    width:                  97vw;
-    height:                 98vh;
+    left:                   20vw;
+    top:                    2vh;
     background-color:       rgba(249,249,255,1);
 }
 
 .dashboard-layer.dashboard-layer-2 {
     z-index:                20;
-    left:                   2vw;
-    top:                    2vh;
+    left:                   22vw;
+    top:                    4vh;
     padding-top:            4vh;
-    width:                  95vw;
-    height:                 96vh;
     background-color:       rgba(243,243,255,1);
 }
 
 .dashboard-layer.dashboard-layer-3 {
     z-index:                30;
-    left:                   3vw;
-    top:                    3vh;
-    padding-top:            3vh;
-    width:                  93vw;
-    height:                 94vh;
+    left:                   24vw;
+    top:                    6vh;
     background-color:       rgba(237,237,255,1);
 }
 
 .dashboard-layer.dashboard-layer-4 {
     z-index:                40;
-    left:                   4vw;
-    top:                    4vh;
-    padding-top:            2vh;
-    width:                  91vw;
-    height:                 92vh;
+    left:                   26vw;
+    top:                    8vh;
     background-color:       rgba(231,231,255,1);
 }
 
 .dashboard-layer.dashboard-layer-5 {
     z-index:                50;
-    left:                   5vw;
-    top:                    5vh;
-    padding-top:            1vh;
-    width:                  89vw;
-    height:                 90vh;
+    left:                   28vw;
+    top:                    10vh;
     background-color:       rgba(225,225,255,1);
 }
 
 .dashboard-layer.dashboard-layer-6 {
     z-index:                60;
-    left:                   6vw;
-    top:                    6vh;
-    padding-top:            0vh;
-    width:                  87vw;
-    height:                 88vh;
+    left:                   30vw;
+    top:                    12vh;
     background-color:       rgba(219,219,255,1);
 }
 
 .dashboard-layer.dashboard-layer-7 {
     z-index:                70;
-    left:                   7vw;
-    top:                    7vh;
-    padding-top:            0vh;
-    width:                  85vw;
-    height:                 86vh;
+    left:                   32vw;
+    top:                    14vh;
     background-color:       rgba(213,213,255,1);
 }
 
 .dashboard-layer.dashboard-layer-8 {
     z-index:                80;
-    left:                   8vw;
-    top:                    8vh;
-    padding-top:            0vh;
-    width:                  83vw;
-    height:                 84vh;
+    left:                   34vw;
+    top:                    16vh;
     background-color:       rgba(207,207,255,1);
 }
 
 .dashboard-layer.dashboard-layer-9 {
     z-index:                90;
-    left:                   9vw;
-    top:                    9vh;
-    padding-top:            0vh;
-    width:                  81vw;
-    height:                 82vh;
+    left:                   36vw;
+    top:                    18vh;
     background-color:       rgba(201,201,255,1);
 }
 
 .plugin-dash .dashboard-layer.dashboard-half-left {
     z-index:                100;
-    left:                   9vw;
-    top:                    9vh;
-    padding-top:            0vh;
-    width:                  40vw;
-    height:                 82vh;
+    left:                   38vw;
+    top:                    20vh;
+    width:                  29.5vw;
     background-color:       rgba(195,195,255,1);
 }
 
 .plugin-dash .dashboard-layer.dashboard-half-right {
     z-index:                100;
-    left:                   50vw;
-    top:                    9vh;
-    padding-top:            0vh;
-    width:                  40vw;
-    height:                 82vh;
+    left:                   68.5vw;
+    top:                    20vh;
+    width:                  29.5vw;
     background-color:       rgba(195,195,255,1);
 }
 
@@ -403,6 +399,10 @@ body.dashboard * {
 }
 
 .center {
+    text-align:             center;
+}
+
+th.center {
     text-align:             center;
 }
 
@@ -418,18 +418,82 @@ td.button {
     width:                  15em;
 }
 
-
-
-/*
-.dashboard form .right {
-    position:               absolute;
-    margin-top:             0.5em;
-    left:                   55vw;
-    top:                    auto;
+td {
+    padding-right:          0.25em;
+    padding-left:           0.25em;
 }
 
-.dashboard form a.right {
-    left:                   55.5vw;
-    margin-top:             1.4em;
+.close {
+    float:                  right;
+    margin-top:             -0.2em;
+    color:                  #aa0000;
+    font-weight:            bold;
+    cursor:                 pointer;
 }
-*/
+
+tr > .write-vertical-down > * {
+    margin-top:             -1em;
+    padding-bottom:         0.25em;
+    white-space:            nowrap;
+    overflow:               visible;
+    width:                  2em;
+    transform-origin:       left bottom;
+    transform:              rotate(+60deg);
+}
+
+tr > .write-vertical-up > * {
+    margin-bottom:          -1em;
+    white-space:            nowrap;
+    overflow:               visible;
+    width:                  2em;
+    transform-origin:       left top;
+    transform:              rotate(-60deg);
+}
+
+.dashboard .half {
+    width:                  50%;
+}
+
+.dashboard .warn-1 {
+    color:                  #666600;
+    background-color:       #ffff99;
+}
+
+.dashboard .warn-2 {
+    color:                  #664400;
+    background-color:       #ffdd66;
+}
+
+.dashboard .warn-3 {
+    color:                  #662200;
+    background-color:       #ffbb66;
+}
+
+.dashboard .warn-4 {
+    color:                  #660000;
+    background-color:       #ff9999;
+}
+
+.dashboard .float-left {
+    float:                  left;
+}
+
+.dashboard .float-right {
+    float:                  right;
+}
+
+.dashboard td .tick {
+    margin-top:             -0.25em;
+    font-size:              2em;
+    color:                  #dd5500;
+}
+
+th.table-title * {
+    margin:                 0;
+    text-align:             center;
+}
+
+
+.dashboard input.changed {
+    background-image:      url('../image/barbers_pole.gif');
+}

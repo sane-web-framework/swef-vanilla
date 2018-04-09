@@ -50,7 +50,7 @@
 <?php             endif; ?>
 <?php     endforeach; ?>
 <?php         if ($p[$this->swef->context[SWEF_COL_CONTEXT]][SWEF_STR_DASHBOARD]): ?>
-      <div><a href="./sysadmin.plugins?c=<?php echo htmlentities ($c); ?>"><t en>Dashboard</t></a></div>
+      <div><a href="./sysadmin.plugins?c=<?php echo urlencode ($c); ?>"><t en>Dashboard</t></a></div>
 <?php         endif; ?>
 
     </div>

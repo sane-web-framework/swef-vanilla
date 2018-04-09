@@ -19,13 +19,15 @@ if (in_array($this->_GET('o'),$ordering)) {
 
   <table class="smalltext">
     <thead>
-      <th><a href="?o=Name">Name</a></th>
-      <th><a href="?o=Definer">Definer</a></th>
-      <th><a href="?o=Modified">Modified</a></th>
-      <th><a href="?o=Created">Created</a></th>
-      <th><a href="?o=Security_type">Security type</a></th>
-      <th>Comment</th>
-      <th>Code</th>
+      <tr>
+        <th><a href="?o=Name">Name</a></th>
+        <th><a href="?o=Definer">Definer</a></th>
+        <th><a href="?o=Modified">Modified</a></th>
+        <th><a href="?o=Created">Created</a></th>
+        <th><a href="?o=Security_type">Security type</a></th>
+        <th>Comment</th>
+        <th>Code</th>
+      </tr>
     </thead>
     <tbody class="list">
 <?php foreach($sps as $sp): ?>
