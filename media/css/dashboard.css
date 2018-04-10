@@ -37,6 +37,7 @@
 }
 
 .tooltip .tooltip {
+    z-index:                10000;
     display:                block;
     box-sizing:             border-box;
     position:               absolute;
@@ -150,7 +151,8 @@ body.dashboard * {
     margin:                 1vh 1vw 1vh 2vw;
     width:                  70vw;
     height:                 80vh;
-    overflow:               scroll;
+    overflow-x:             visible;
+    overflow-y:             scroll;
     resize:                 vertical;
     background-color:       rgba(239,239,255,1);
 }
