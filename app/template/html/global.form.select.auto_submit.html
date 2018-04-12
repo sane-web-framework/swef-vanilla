@@ -7,7 +7,7 @@ foreach ($_ARGS as $k=>$v) {
 }
 ?>
 <?php if(isset($name) && array_key_exists('options',$_ARGS)): ?>
-      <select name="<?php echo htmlentities ($name); ?>" onchange="this.form.submit()">
+      <select name="<?php echo htmlentities ($name); ?>" onchange="swef.wait();this.form.submit()">
 <?php     foreach($_ARGS['options'] as $v=>$n): ?>
         <option
           value="<?php echo htmlentities($v); ?>"

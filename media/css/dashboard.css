@@ -499,3 +499,11 @@ th.table-title * {
 .dashboard input.changed {
     background-image:      url('../image/barbers_pole.gif');
 }
+
+.dashboard .headnote {
+    position:               fixed;
+    top:                    11vh;
+    right:                  6vw;
+    width:                  50vw;
+    text-align:             right;
+}
