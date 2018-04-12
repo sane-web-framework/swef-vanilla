@@ -456,6 +456,14 @@ tr > .write-vertical-up > * {
     width:                  50%;
 }
 
+.dashboard .third {
+    width:                  33%;
+}
+
+.dashboard .quarter {
+    width:                  25%;
+}
+
 .dashboard .warn-1 {
     color:                  #666600;
     background-color:       #ffff99;
