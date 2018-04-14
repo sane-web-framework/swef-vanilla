@@ -89,7 +89,7 @@ if (!count($constants)) {
 <?php foreach ($files as $f=>$r): ?>
 
     <div class="constant">
-      <span><?php echo htmlentities ($f); ?></span>
+      <span><?php echo htmlspecialchars ($f); ?></span>
     </div>
 <?php endforeach; ?>
 
@@ -101,7 +101,7 @@ if (!count($constants)) {
 
     <div class="input">
       <label for="" class="tiny">Like:</label>
-      *<input type="text" name="swef-constants-like" value="<?php echo htmlentities ($this->_POST('swef-constants-like')); ?>" />*
+      *<input type="text" name="swef-constants-like" value="<?php echo htmlspecialchars ($this->_POST('swef-constants-like')); ?>" />*
       <input type="submit" value="<t en>Filter</t>" />
     </div>
 
@@ -112,11 +112,11 @@ if (!count($constants)) {
   <div class="list">
 <?php foreach ($constants as $c=>$v): ?>
     <div class="constant">
-      <label for=""><?php echo htmlentities ($v[0]); ?></label>
-      <label for="" class="wee"><?php if($v[1]): ?>[<?php echo htmlentities ($v[1]); ?>]:<?php endif; ?></label>
-      <label for="" class="vast"><?php echo htmlentities ($c); ?></label>
-      <label for="" class="tiny"><?php echo htmlentities ($v[2]); ?></label>
-      <span><?php echo htmlentities ($v[3]); ?></span>
+      <label for=""><?php echo htmlspecialchars ($v[0]); ?></label>
+      <label for="" class="wee"><?php if($v[1]): ?>[<?php echo htmlspecialchars ($v[1]); ?>]:<?php endif; ?></label>
+      <label for="" class="vast"><?php echo htmlspecialchars ($c); ?></label>
+      <label for="" class="tiny"><?php echo htmlspecialchars ($v[2]); ?></label>
+      <span><?php echo htmlspecialchars ($v[3]); ?></span>
     </div>
 <?php endforeach; ?>
   </div>

@@ -33,12 +33,12 @@ if (in_array($this->_GET('o'),$ordering)) {
 <?php foreach($sps as $sp): ?>
 
       <tr>
-        <td><?php echo htmlentities ($sp['Name']); ?></td>
-        <td><?php echo htmlentities ($sp['Definer']); ?></td>
-        <td><?php echo htmlentities ($sp['Modified']); ?></td>
-        <td><?php echo htmlentities ($sp['Created']); ?></td>
-        <td><?php echo htmlentities ($sp['Security_type']); ?></td>
-        <td><?php echo htmlentities ($sp['Comment']); ?></td>
+        <td><?php echo htmlspecialchars ($sp['Name']); ?></td>
+        <td><?php echo htmlspecialchars ($sp['Definer']); ?></td>
+        <td><?php echo htmlspecialchars ($sp['Modified']); ?></td>
+        <td><?php echo htmlspecialchars ($sp['Created']); ?></td>
+        <td><?php echo htmlspecialchars ($sp['Security_type']); ?></td>
+        <td><?php echo htmlspecialchars ($sp['Comment']); ?></td>
         <td>&nbsp;</td>
       </tr>
 <?php endforeach; ?>

@@ -2,7 +2,7 @@
 
 <div class="content">
 
-  <h2><t en>Welcome</t> <?php echo htmlentities ($this->swef->user->userName); ?>!</h2>
+  <h2><t en>Welcome</t> <?php echo htmlspecialchars ($this->swef->user->userName); ?>!</h2>
 
 </div>
 

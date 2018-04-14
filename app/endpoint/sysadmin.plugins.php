@@ -41,11 +41,11 @@
 <?php     foreach ($plugins as $c=>$p): ?>
 
     <div class="item<?php if($this->_GET(SWEF_GET_CLASSNAME)==$c): ?> selected<?php endif; ?>">
-      <h3><?php echo htmlentities ($c); ?></h3>
+      <h3><?php echo htmlspecialchars ($c); ?></h3>
       <span>Enabled for:</span>
 <?php         foreach ($p as $context=>$properties): ?>
 <?php             if ($properties[SWEF_COL_ENABLED]): ?>
-      <span class="hilite"><?php echo htmlentities ($context); ?></span>
+      <span class="hilite"><?php echo htmlspecialchars ($context); ?></span>
 
 <?php             endif; ?>
 <?php     endforeach; ?>

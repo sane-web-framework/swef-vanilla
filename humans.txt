@@ -20,8 +20,8 @@
     Location:       Developer Location
                             
     Creator:        Creator Name
-    Site:           https://<?php echo htmlentities ($_SERVER['HTTP_HOST']); ?>/
-    Contact:        https://<?php echo htmlentities ($_SERVER['HTTP_HOST']); ?>/contact
+    Site:           https://<?php echo htmlspecialchars ($_SERVER['HTTP_HOST']); ?>/
+    Contact:        https://<?php echo htmlspecialchars ($_SERVER['HTTP_HOST']); ?>/contact
     Location:       Creator Location
                             
 # THANKS

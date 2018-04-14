@@ -3,7 +3,7 @@
   <head>
 <?php $this->pull ('global.head'); ?>
     <link rel="stylesheet" href="./media/css/www.css">
-    <title><?php echo htmlentities ($this->titleGet()); ?> - My SWEF Website</title>
+    <title><?php echo htmlspecialchars ($this->titleGet()); ?> - My SWEF Website</title>
   </head>
   <body class="www www-default">
 <?php $this->pull ('global.legacy'); ?>
@@ -11,7 +11,7 @@
     <h1>Default web page template</h1>
     <p>This is HTML5 Boilerplate (adapted for SWEF).</p>
     <p><a href="http://www.html5boilerplate.com/">html5boilerplate.com</a></p>
-    <p><?php echo htmlentities (__FILE__); ?></p>
+    <p><?php echo htmlspecialchars (__FILE__); ?></p>
 
 <!-- PUSHED SCRIPT OUTPUT -->
 <?php $this->output (); ?>
