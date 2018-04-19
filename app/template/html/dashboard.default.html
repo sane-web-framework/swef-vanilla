@@ -12,11 +12,23 @@
 <?php $this->pull ('global.legacy'); ?>
 
     <h1>SWEF <t en>dashboard</t></h1>
-
-<!-- PUSHED SCRIPT OUTPUT -->
-<?php $this->output (); ?>
-
     <small><t en>HTML5 templates derived from</t> <a href="http://www.html5boilerplate.com/">html5boilerplate.com</a></small>
+
+<?php if ($this->swef->userLoggedIn()): ?>
+
+    <div class="content">
+<!-- PUSHED SCRIPT OUTPUT (NORMAL) -->
+<?php   $this->output (); ?>
+
+    </div>
+<?php   $this->pull ('dashboard.menu'); ?>
+
+<?php else: ?>
+
+<!-- PUSHED SCRIPT OUTPUT (LOGIN) -->
+<?php   $this->output (); ?>
+
+<?php endif; ?>
 
 <?php $this->pull ('global.notifications'); ?>
 

@@ -1,15 +1,8 @@
-<?php
-if (array_key_exists('title',$_ARGS)) {
-    $title          = $_ARGS['title'];
-}
-else {
-    $title          = 'Menu';
-}
-?>
+<?php $plugins = $this->swef->pluginsList (); ?>
 
 <div class="menu">
 
-  <h2><t en><?php echo htmlspecialchars ($title); ?></t></h2>
+  <h2><?php echo htmlspecialchars ($this->swef->page->titleGet()); ?></h2>
 
     <ul>
       <li><a href="./dashboard.home"><t en>Home</t></a></li>
@@ -21,4 +14,36 @@ else {
     </ul>
 
 </div>
+
+<?php if (is_array($plugins)): ?>
+
+<div class="menu-plugins">
+
+  <div class="list">
+
+<?php     foreach ($plugins as $c=>$p): ?>
+
+    <div class="item<?php if($this->swef->page->_GET(SWEF_GET_CLASSNAME)==$c): ?> selected<?php endif; ?>">
+      <h3><?php echo htmlspecialchars ($c); ?></h3>
+      <span>Enabled for:</span>
+<?php         foreach ($p as $context=>$properties): ?>
+<?php             if ($properties[SWEF_COL_ENABLED]): ?>
+      <span class="hilite"><?php echo htmlspecialchars ($context); ?></span>
+
+<?php             endif; ?>
+<?php     endforeach; ?>
+<?php         if ($p[$this->swef->context[SWEF_COL_CONTEXT]][SWEF_STR_DASHBOARD]): ?>
+      <div><a href="./sysadmin.plugins?c=<?php echo urlencode ($c); ?>"><t en>Dashboard</t></a></div>
+<?php         endif; ?>
+
+    </div>
+    <hr/>
+
+<?php     endforeach; ?>
+
+  </div>
+
+</div>
+
+<?php endif; ?>
 

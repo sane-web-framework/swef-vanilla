@@ -80,7 +80,7 @@ if (!count($constants)) {
 
 ?>
 
-<div class="content">
+<?php $this->titleSet ('Constants'); ?>
 
   <div class="list">
     <div class="constant">
@@ -120,9 +120,4 @@ if (!count($constants)) {
     </div>
 <?php endforeach; ?>
   </div>
-
-</div>
-
-
-<?php $this->pull ('dashboard.menu','Constants'); ?>
 

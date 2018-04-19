@@ -1,7 +1,5 @@
 <?php $this->titleSet ('Stored procedures'); ?>
 
-<div class="content">
-
 <p>This tool requires that the database user have permissions to read stored procedure information from the database.</p>
 
 <?php
@@ -15,7 +13,7 @@ if (in_array($this->_GET('o'),$ordering)) {
 <?php $sps = $this->swef->db->dbCall (SWEF_CALL_SPSSTATUS,$this->swef->db->dbName()); ?>
 <?php $sps = $this->swef->dataSort ($sps,$o,SWEF_SORT_ASC); ?>
 
-<p>Database may require special configuration to show SQL code here.</p>
+  <p>Database may require special configuration to show SQL code here.</p>
 
   <table class="smalltext">
     <thead>
@@ -45,9 +43,4 @@ if (in_array($this->_GET('o'),$ordering)) {
 
     </tbody>
   </table>
-
-</div>
-
-
-<?php $this->pull ('dashboard.menu','Stored procedures'); ?>
 
