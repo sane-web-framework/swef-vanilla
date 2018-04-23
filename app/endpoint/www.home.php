@@ -29,3 +29,4 @@
   <p>Set SWEF_DIAGNOSTIC_MODE to true in order to collect XML file of untranslated phrases in <?php echo htmlspecialchars (SWEF_DIAGNOSTIC_FILE_UNTRANSLATED); ?> for bulk translation; these phrases can then be added to phrases.mylanguagecode. Eventually there will be a tool for that...</p>
 
 </div>
+
